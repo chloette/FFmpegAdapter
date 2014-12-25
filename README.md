@@ -22,6 +22,9 @@ FFmpegAdapter README
 * Run `ndk-build -B`
 * That's all, the libraries are ready now (under android/FFmpegAdapter/libs/armeabi-v7a).
 
+####Java
+* Just inherit from android/FFmpegAdapter/src/com/android/ffmpegadapter/FFmpegAdapter.java
+
 ##Contact
 mailto: chloette.e@gmail.com
 
