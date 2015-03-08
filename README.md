@@ -13,16 +13,19 @@ FFmpegAdapter README
 
 ##How to use
 ####win32:
+(***Notice:*** win32 does not using latest windows ffmpeg libraries.)
 * install Visual Studio 2013 express (or other version, probably work)
 * run win32/ffmpeg_adapter/ffmpeg_adapter.sln
 * DEBUG (or press F5), that's all.
 * And, you'd better check `ffmpeg_adapter_win_main.cpp` first, to make sure the `test_files` folder is not empty.
 
 ####JNI
+(***Notice:*** using [ffmpeg2.6](http://ffmpeg.org/))
 * Makesure you know what NDK is.
 * Then just `cd` to android/FFmpegAdapter/jni
 * Run `ndk-build -B`
-* That's all, the libraries are ready now (under android/FFmpegAdapter/libs/armeabi-v7a).
+* That's all, libraries are ready (under android/FFmpegAdapter/libs/armeabi-v7a).
+* BTW, ffmpeg libraries come from [ffmpeg4android](https://github.com/chloette/ffmpeg4android)
 
 ####Java
 * Just inherit from android/FFmpegAdapter/src/com/android/ffmpegadapter/FFmpegAdapter.java
