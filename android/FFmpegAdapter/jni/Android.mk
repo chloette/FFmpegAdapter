@@ -44,4 +44,4 @@ LOCAL_C_INCLUDES := $(LOCAL_PATH) \
                     ./include/libswscale
 
 include $(BUILD_SHARED_LIBRARY)
-$(call import-module, ffmpeg4android/ffmpeg-2.4.2/android/arm)
+$(call import-module, ffmpeg4android/android/arm)
