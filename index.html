@@ -34,7 +34,9 @@
 <h2>
 <a id="about" class="anchor" href="#about" aria-hidden="true"><span class="octicon octicon-link"></span></a>About</h2>
 
-<p><code>FFmpegAdapter</code> is an adapter of FFmpeg, it includes Java part, JNI part and C part; AND <strong>it's possible to debug FFmpegAdapter on <code>Visual Studio 2013</code> directly.</strong></p>
+<p><code>FFmpegAdapter</code> is a simple adapter with FFmpeg, supporting <strong><em>decode/encode frames/bitmap/buffer from/to video/audio</em></strong> easily. It includes Java part, JNI part and C part; AND <strong>it's even possible to debug FFmpegAdapter on <code>Visual Studio 2013</code> directly.</strong></p>
+
+<p>[FFmpeg native libraries comes from <a href="https://github.com/chloette/ffmpeg4android">ffmpeg4android</a>]</p>
 
 <h2>
 <a id="architecture-todo" class="anchor" href="#architecture-todo" aria-hidden="true"><span class="octicon octicon-link"></span></a>Architecture (TODO)</h2>
@@ -51,6 +53,8 @@
 <h4>
 <a id="win32" class="anchor" href="#win32" aria-hidden="true"><span class="octicon octicon-link"></span></a>win32:</h4>
 
+<p>(<strong><em>Notice:</em></strong> win32 does not using latest windows ffmpeg libraries.)</p>
+
 <ul>
 <li>install Visual Studio 2013 express (or other version, probably work)</li>
 <li>run win32/ffmpeg_adapter/ffmpeg_adapter.sln</li>
@@ -61,12 +65,16 @@
 <h4>
 <a id="jni" class="anchor" href="#jni" aria-hidden="true"><span class="octicon octicon-link"></span></a>JNI</h4>
 
+<p>(<strong><em>Notice:</em></strong> using <a href="http://ffmpeg.org/">ffmpeg2.6</a>)</p>
+
 <ul>
 <li>Makesure you know what NDK is.</li>
 <li>Then just <code>cd</code> to android/FFmpegAdapter/jni</li>
 <li>Run <code>ndk-build -B</code>
 </li>
-<li>That's all, the libraries are ready now (under android/FFmpegAdapter/libs/armeabi-v7a).</li>
+<li>That's all, libraries are ready (under android/FFmpegAdapter/libs/armeabi-v7a).</li>
+<li>BTW, ffmpeg libraries come from <a href="https://github.com/chloette/ffmpeg4android">ffmpeg4android</a>
+</li>
 </ul>
 
 <h4>
