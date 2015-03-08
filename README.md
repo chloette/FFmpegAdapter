@@ -2,7 +2,9 @@ FFmpegAdapter README
 ========
 
 ##About
-`FFmpegAdapter` is an adapter of FFmpeg, it includes Java part, JNI part and C part; AND **it's possible to debug FFmpegAdapter on `Visual Studio 2013` directly.**
+`FFmpegAdapter` is a simple adapter with FFmpeg, supporting ***decode/encode frames/bitmap/buffer from/to video/audio*** easily. It includes Java part, JNI part and C part; AND **it's even possible to debug FFmpegAdapter on `Visual Studio 2013` directly.**
+
+[FFmpeg native libraries comes from [ffmpeg4android](https://github.com/chloette/ffmpeg4android)]
 
 ##Architecture (TODO)
 * Java -- FFmpegAdapter.java
