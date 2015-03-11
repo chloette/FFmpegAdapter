@@ -15,13 +15,9 @@ gen/
 
 # Gradle files
 .gradle/
-gradle/
 .idea/
 build/
-
-#workspace for Eclipse
-workspace/
-.settings/
+gradle/
 
 # Local configuration file (sdk path, etc)
 local.properties
