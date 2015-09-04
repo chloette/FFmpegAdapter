@@ -279,6 +279,7 @@ int ffmpeg_adapter_converter::output_audio(AVFrame** pp_new_frame, bool force) {
     res = ErrorAllocFailed;
     goto EXIT;
   }
+
   /**
   * Read as many samples from the FIFO buffer as required to fill the frame.
   * The samples are stored in the frame temporarily.
@@ -294,10 +295,12 @@ int ffmpeg_adapter_converter::output_audio(AVFrame** pp_new_frame, bool force) {
   res = 0;
 EXIT:
   if (res) {
-  	if (NULL == p_temp_frame->buf[0] && NULL != p_temp_frame->data[0]){
-		av_free(p_temp_frame->data[0]);
-		p_temp_frame->data[0] = NULL;
-	}
+  	if (p_temp_frame &&
+      NULL == p_temp_frame->buf[0] &&
+      NULL != p_temp_frame->data[0]){
+      av_free(p_temp_frame->data[0]);
+  		p_temp_frame->data[0] = NULL;
+  	}
     RELEASE_FRAME(p_temp_frame);
 
     *pp_new_frame = NULL;
